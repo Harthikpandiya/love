@@ -1,167 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Love Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-
-
-
-
-    body{
+    body {
       background-image: url(o2.jpg);
-        background-size: cover;
-        background-position:-30px 2px ;
-        background-repeat: no-repeat;
-      
+      background-size: cover;
+      background-position: -30px 2px;
+      background-repeat: no-repeat;
     }
-   
-     
 
+    h1 {
+      color: #F20056 !important;
+    }
 
-      * {
-  box-sizing: border-box;
-}
-h1{
-  color: #F20056  !important;
-
-}
-
-
-html {
-  font-size: calc(100% + 0.5vw);
-  color: #f9f5f7;
-}
-
-
-  input {
-    color: #151313;
-    font-size: 1.25rem;
-    line-height: 1;
-    outline: none;
-    height:  0.5em;
-    width: 12em;
-    padding: 0.8em 1em;
-    border: 0.25em solid transparent;
-
-    border-radius: 1.8em;
-  
-  }
-    
-   
+    input {
+      color: #151313;
+      font-size: 1.25rem;
+      line-height: 1;
+      outline: none;
+      height: 0.5em;
+      width: 100%;
+      padding: 0.8em 1em;
+      border: 0.25em solid transparent;
+      border-radius: 1.8em;
+    }
 
     input:focus {
       outline: 2px dashed #ad2b89;
       outline-offset: 0.02em;
     }
 
-    input::placeholder 
-    {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: 0.02em;
-            font-size: 0.5rem;
-            opacity: 2rem;
-            color: red;
-            text-align: center;
-         
+    input::placeholder {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 0.02em;
+      font-size: 0.5rem;
+      opacity: 2rem;
+      color: red;
+      text-align: center;
     }
 
-button {
+    .b2 {
+      margin-left: 2%;
+    }
 
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round,sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 9em;
-}
+    .b1 {
+      margin-left: 5%;
+    }
 
-button:after {
-  background-clip: padding-box;
-  background-color: #1CB0F6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-button:main,
-button:focus {
-  user-select: auto;
-}
-
-button:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-}
-
-button:disabled {
-  cursor: auto;
-}
-
-button:active {
-  border-width: 4px 0 0;
-  background: none;
-}
-  .b2{
-   margin-left: 2%;
-  }
-  .b1{
-   margin-left: 5%;
-  }
-.main{
-
-     transform: translateX(7%);
-    margin-top: 10%;
-
-
-}
-
-    
-   
+    .main {
+      transform: translateX(7%);
+      margin-top: 10%;
+    }
   </style>
 </head>
-<body>
-  <div class="main">
-    <h1>Love Calculator</h1>
-    <!-- <label for="fname">Your Name:</label> -->
-    <input type="text" id="fname" name="fname" placeholder="Your Name"><br><br>
-    <!-- <label for="sname">Partner's Name:</label> -->
-    <input type="text" id="sname" name="sname" placeholder="Partner's Name"><br><br>
-    <button onclick="calculateLove()" class="b1">Calculate</button>
-    <button onclick="reset()" class="b2">Reset</button><br><br>
-    <div id="result"></div>
 
+<body>
+  <div class="container">
+    <div class="main text-center">
+      <h1>Love Calculator</h1>
+      <div class="form-group">
+        <input type="text" class="form-control mb-2" id="fname" name="fname" placeholder="Your Name">
+        <input type="text" class="form-control mb-2" id="sname" name="sname" placeholder="Partner's Name">
+      </div>
+      <button onclick="calculateLove()" class="btn btn-primary mb-2">Calculate</button>
+      <button onclick="reset()" class="btn btn-secondary mb-2">Reset</button>
+      <div id="result"></div>
+    </div>
   </div>
-  
 
   <script src="love.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
