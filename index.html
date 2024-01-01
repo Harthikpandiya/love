@@ -12,6 +12,8 @@
       background-size: cover;
       background-position: -30px 2px;
       background-repeat: no-repeat;
+      color: #f9f5f7;
+      font-size: calc(100% + 0.5vw);
     }
 
     h1 {
@@ -23,11 +25,12 @@
       font-size: 1.25rem;
       line-height: 1;
       outline: none;
-      height: 0.5em;
+      height: 3em;
       width: 100%;
       padding: 0.8em 1em;
       border: 0.25em solid transparent;
       border-radius: 1.8em;
+      margin-bottom: 1em;
     }
 
     input:focus {
@@ -44,17 +47,15 @@
       text-align: center;
     }
 
-    .b2 {
-      margin-left: 2%;
-    }
-
-    .b1 {
-      margin-left: 5%;
-    }
-
-    .main {
-      transform: translateX(7%);
-      margin-top: 10%;
+    .btn {
+      font-family: din-round, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 20px;
+      text-transform: uppercase;
+      width: 100%;
+      margin-bottom: 1em;
     }
   </style>
 </head>
@@ -64,11 +65,11 @@
     <div class="main text-center">
       <h1>Love Calculator</h1>
       <div class="form-group">
-        <input type="text" class="form-control mb-2" id="fname" name="fname" placeholder="Your Name">
-        <input type="text" class="form-control mb-2" id="sname" name="sname" placeholder="Partner's Name">
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="Your Name">
+        <input type="text" class="form-control" id="sname" name="sname" placeholder="Partner's Name">
       </div>
-      <button onclick="calculateLove()" class="btn btn-primary mb-2">Calculate</button>
-      <button onclick="reset()" class="btn btn-secondary mb-2">Reset</button>
+      <button onclick="calculateLove()" class="btn btn-primary">Calculate</button>
+      <button onclick="reset()" class="btn btn-secondary">Reset</button>
       <div id="result"></div>
     </div>
   </div>
@@ -82,3 +83,5 @@
 </body>
 
 </html>
+
+
